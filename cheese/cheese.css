@@ -1,0 +1,63 @@
+body {
+    font-family: 'Short Stack', cursive;
+    background-color: #f2ebe7;
+    color: #4a3626;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.chezz-fall {
+position: absolute;
+width: 50px;
+height: 50px;
+pointer-events: auto;
+cursor: pointer;
+animation: chezz-fall linear infinite;
+transition: transform var(--transition-duration) ease-in-out;
+outline: none;
+}
+
+.chezz-fall-container {
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+pointer-events: none; 
+overflow: hidden;
+z-index: 1000;
+}
+
+@keyframes chezz-fall {
+0% { top: -40px; }
+100% { top: 100vh; }
+}
+
+.cheese-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 500;
+}
+
+.clickable-icon {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    transition: transform 0.5s;
+}
+
+.clickable-icon:hover {
+    transform: scale(1.2);
+}
+
+.click-me-text {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
